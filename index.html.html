@@ -1,0 +1,469 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../js\javascript.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css"> 
+</head>
+<body>
+		<h1 align="center">ASSIGNMENT</h1>
+	<div class="b1">
+		<button  class="button" id="Btn1">quick sort</button>
+		<button  class="button" id="Btn2">subset of a string</button>
+		<button  class="button" id="Btn3"> largest number</button>
+		<button  class="button" id="Btn4">multiples of 3 and 5 </button><br/><br/>
+		<button  class="button" id="Btn5">starts with 'Java'</button>
+		<button  class="button" id="Btn6">integers in range</button>
+		<button  class="button" id="Btn7">list of elements</button>
+		<button  class="button" id="Btn8">calculate age</button><br/><br/>
+		<button  class="button" id="Btn9">number of vowels</button>
+		<button  class="button" id="Btn10">occurences of a letter</button>
+	</div>	
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<div class="modal-body">
+			<p>q1.write a java script programme for quicksort</p>
+			<input type="text" id="input">
+			<button id="execute" onclick= "sort()">execute the programme</button><br/><br/>
+			<span>RESULT:</span><div id="output"></div>
+			<button id="res">reset</button>
+			<button id="cancel">cancel</button>
+		</div>
+    </div>
+</div>
+
+<div id="myModal2" class="modal">
+	<div class="modal-content">
+		<div class="modal-body">
+			<p>q2.write a java script programme for substring</p>
+			<input type="text" id="input2">
+			<button id="execute" onclick= "subset()">execute the programme</button><br/><br/>
+			<span>RESULT:</span><div id="output2"></div>
+			<button id="res">reset</button>
+			<button id="cancel">cancel</button>
+		</div>
+    </div>
+</div>
+
+<div id="myModal3" class="modal">
+	<div class="modal-content">
+		<div class="modal-body">
+			<p>q3.write a java script programme to find largest among five numbers </p>
+			<input type="text" id="input3">
+			<button id="execute" onclick= "largest()">execute the programme</button><br/><br/>
+			<span>RESULT:</span><div id="output3"></div>
+			<button id="res">reset</button>
+			<button id="cancel">cancel</button>
+		</div>
+    </div>
+</div>
+
+<div id="myModal4" class="modal">
+	<div class="modal-content">
+		<div class="modal-body">
+			<p>q4.Write a Javascript program for the sum of multiples of 3 and 5 under 1000? </p>
+			<input type="text" id="input4">
+			<button id="execute" onclick= "sum()">execute the programme</button><br/><br/>
+			<span>RESULT:</span><div id="output4"></div>
+			<button id="res">reset</button>
+			<button id="cancel">cancel</button>
+		</div>
+    </div>
+</div>
+
+<div id="myModal5" class="modal">
+	<div class="modal-content">
+		<div class="modal-body">
+			<p>q5.write a java script programme to find string starts with Java and false otherwise </p>
+			<input type="text" id="input5">
+			<button id="execute" onclick= "string_starts()">execute the programme</button><br/><br/>
+			<span>RESULT:</span><div id="output5"></div>
+			<button id="res">reset</button>
+			<button id="cancel">cancel</button>
+		</div>
+    </div>
+</div>
+
+<div id="myModal6" class="modal">
+	<div class="modal-content">
+		<div class="modal-body">
+			<p>q6.write a java script programme to find integers in given range </p>
+			<input type="text" id="input6">
+			<button id="execute" onclick= "largest()">execute the programme</button><br/><br/>
+			<span>RESULT:</span><div id="output6"></div>
+			<button id="res">reset</button>
+			<button id="cancel">cancel</button>
+		</div>
+    </div>
+</div>
+
+<div id="myModal7" class="modal">
+	<div class="modal-content">
+		<div class="modal-body">
+			<p>q7.write a java script programme to find list of elements that exits in both arrays </p>
+			<input type="text" id="input7">
+			<button id="execute" onclick= "largest()">execute the programme</button><br/><br/>
+			<span>RESULT:</span><div id="output7"></div>
+			<button id="res">reset</button>
+			<button id="cancel">cancel</button>
+		</div>
+    </div>
+</div>
+
+<div id="myModal8" class="modal">
+	<div class="modal-content">
+		<div class="modal-body">
+			<p>q8.write a java script programme to calculate age </p>
+			<input type="text" id="input8">
+			<button id="execute" onclick= "largest()">execute the programme</button><br/><br/>
+			<span>RESULT:</span><div id="output8"></div>
+			<button id="res">reset</button>
+			<button id="cancel">cancel</button>
+		</div>
+    </div>
+</div>
+
+<div id="myModal9" class="modal">
+	<div class="modal-content">
+		<div class="modal-body">
+			<p>9.write a java script programme to find no.of ovewls in a string </p>
+			<input type="text" id="input9">
+			<button id="execute" onclick= "vowel_count()">execute the programme</button><br/><br/>
+			<span>RESULT:</span><div id="output9"></div>
+			<button id="res">reset</button>
+			<button id="cancel">cancel</button>
+		</div>
+    </div>
+</div>
+
+<div id="myModal10" class="modal">
+	<div class="modal-content">
+		<div class="modal-body">
+			<p>q10.write a java script programme to find no.of occurences of a letter </p>
+			<input type="text" id="input10">
+			<button id="execute" onclick= "Char_Counts()">execute the programme</button><br/><br/>
+			<span>RESULT:</span><div id="output10"></div>
+			<button id="res">reset</button>
+			<button id="cancel">cancel</button>
+		</div>
+    </div>
+</div>
+
+<script>
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("Btn1");
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+var modal2 = document.getElementById("myModal2");
+var btn2 = document.getElementById("Btn2");
+
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+
+
+var modal3 = document.getElementById("myModal3");
+var btn3 = document.getElementById("Btn3");
+
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal.style.display = "none";
+  }
+}
+
+
+var modal4 = document.getElementById("myModal4");
+var btn4 = document.getElementById("Btn4");
+
+btn4.onclick = function() {
+  modal4.style.display = "block";
+}
+window.onclick = function(event) {
+  if (event.target == modal4) {
+    modal4.style.display = "none";
+  }
+}
+
+
+var modal5 = document.getElementById("myModal5");
+var btn5 = document.getElementById("Btn5");
+
+btn5.onclick = function() {
+  modal5.style.display = "block";
+}
+window.onclick = function(event) {
+  if (event.target == modal5) {
+    modal5.style.display = "none";
+  }
+}
+
+
+var modal6 = document.getElementById("myModal6");
+var btn6 = document.getElementById("Btn6");
+
+btn6.onclick = function() {
+  modal6.style.display = "block";
+}
+window.onclick = function(event) {
+  if (event.target == modal6) {
+    modal6.style.display = "none";
+  }
+}
+
+
+var modal7 = document.getElementById("myModal7");
+var btn7 = document.getElementById("Btn7");
+
+btn7.onclick = function() {
+  modal7.style.display = "block";
+}
+window.onclick = function(event) {
+  if (event.target == modal7) {
+    modal7.style.display = "none";
+  }
+}
+
+
+var modal8 = document.getElementById("myModal8");
+var btn8 = document.getElementById("Btn8");
+
+btn8.onclick = function() {
+  modal8.style.display = "block";
+}
+window.onclick = function(event) {
+  if (event.target == modal8) {
+    modal8.style.display = "none";
+  }
+}
+
+
+var modal9 = document.getElementById("myModal9");
+var btn9 = document.getElementById("Btn9");
+
+btn9.onclick = function() {
+  modal9.style.display = "block";
+}
+window.onclick = function(event) {
+  if (event.target == modal9) {
+    modal9.style.display = "none";
+  }
+}
+
+
+var modal10 = document.getElementById("myModal10");
+var btn10 = document.getElementById("Btn10");
+
+btn10.onclick = function() {
+  modal10.style.display = "block";
+}
+window.onclick = function(event) {
+  if (event.target == modal10) {
+    modal10.style.display = "none";
+  }
+}
+
+
+
+
+function sort(){
+  var input = document.getElementById("input").value;
+  var str_items = input.split(",");
+  var items = [];
+  for (var count = 0; count < str_items.length; count++) {
+    items.push(parseInt(str_items[count]));
+  }
+  var sortedArray = quickSort(items, 0, items.length - 1);
+  var sort_str = sortedArray.join(",");
+  document.getElementById("output").innerHTML = sort_str;
+}
+var items = [];
+var size = 5; //Maximum Array size
+function swap(items, leftIndex, rightIndex){
+    var temp = items[leftIndex];
+    items[leftIndex] = items[rightIndex];
+    items[rightIndex] = temp;
+}
+function partition(items, left, right) {
+    var pivot   = items[Math.floor((right + left) / 2)], //middle element
+        i       = left, //left pointer
+        j       = right; //right pointer
+    while (i <= j) {
+        while (items[i] < pivot) {
+            i++;
+        }
+        while (items[j] > pivot) {
+            j--;
+        }
+        if (i <= j) {
+            swap(items, i, j); //sawpping two elements
+            i++;
+            j--;
+        }
+    }
+    return i;
+}
+
+function quickSort(items, left, right) {
+    var index;
+    if (items.length > 1) {
+        index = partition(items, left, right); //index returned from partition
+        if (left < index - 1) { //more elements on the left side of the pivot
+            quickSort(items, left, index - 1);
+        }
+        if (index < right) { //more elements on the right side of the pivot
+            quickSort(items, index, right);
+        }
+    }
+    return items;
+}
+// first call to quick sort
+
+function subset() {
+  var input = document.getElementById("input2").value;
+  document.getElementById("output2").innerHTML = input.sub_String();
+}
+
+String.prototype.sub_String = function() {
+  var subset = [];
+  for (var m = 0; m < this.length; m++) {
+    for (var n = m+1; n<this.length+1; n++) {
+      subset.push(this.slice(m,n));
+    }
+  }
+  return subset;
+}
+
+function largest() {
+  var input = document.getElementById("input3").value;
+  var str_items = input.split(",");
+  var items = [];
+  for (var count = 0; count < str_items.length; count++) {
+    items.push(parseInt(str_items[count]));
+  } 
+  var largest = 0;
+  for ( var iterator = 0; iterator <= largest; iterator++ ) {
+    if (items[iterator] > largest) {
+      largest = items[iterator];
+    }
+  }
+  document.getElementById("output3").innerHTML = largest;
+}
+
+function sum() {
+  var input = document.getElementById("input4").value;
+  var sum = 0;
+  for (var x = 0; x < input; x++) {
+    if (x % 3 === 0 || x % 5 === 0) {
+      sum += x;
+    }
+  }
+  document.getElementById("output4").innerHTML = sum;
+}
+
+function string_starts()
+{
+ var char =document.getElementById("input5").value; 
+  if (char.length < 4)
+  {
+   document.getElementById("output5").innerHTML= false;
+  }
+  front =char.substring(0, 4);
+  if (front == 'Java') 
+  {
+    document.getElementById("output5").innerHTML= true;
+  }
+   else 
+   {
+    document.getElementById("output5").innerHTML= false;
+  }
+  }
+  
+  function range() {
+  var start = document.getElementById('input61').value;
+  var end = document.getElementById('input62').value;
+  var ans = [];
+  for(var i = parseInt(start) + 1; i < end; i++) {
+    ans.push(i);
+  }
+  document.getElementById("answer6").innerHTML = ans;
+}
+
+function vowel_count() {
+  var input = document.getElementById("input9").value;
+  var vowel_list = 'aeiouAEIOU';
+  var vcount = 0;
+  for(var x = 0; x < input.length ; x++) {
+    if (vowel_list.indexOf(input[x]) !== -1) {
+      vcount += 1;
+    }
+  
+  }
+  document.getElementById("output9").innerHTML = vcount;
+}
+
+function Char_Counts() {
+  var input = document.getElementById("input10").value;
+  var uchars = {};
+
+  input.replace(/\S/g, function(l){uchars[l] = (isNaN(uchars[l]) ? 1 : uchars[l] + 1);});
+  
+  document.getElementById("output10").innerHTML = showProps(uchars);
+}
+
+function showProps(obj) {
+  return Object.entries(obj).map(([key, value]) => [key +" - " + value  + " "])
+    
+}
+
+function range() {
+  document.getElementById("answer6").innerHTML = '';
+  var start = document.getElementById('input61').value;
+  var end = document.getElementById('input62').value;
+  var ans = [];
+  for(var i = parseInt(start) + 1; i < end; i++) {
+    ans.push(i);
+  }
+  document.getElementById("answer6").innerHTML = ans;
+}
+
+//------------------Common in both arrays
+function findCommonElement() {       
+  document.getElementById("answer7").innerHTML = '';
+  var str1 = document.getElementById('input71').value;
+  var str2 = document.getElementById('input72').value;
+
+  var arr1 = str1.split(",");
+  var arr2 = str2.split(",");
+
+  var origArr1 = [], origArr2 = [], commonElements = [];
+
+  for( var i = 0; i < arr1.length; i++) {
+    origArr1.push(parseInt(arr1[i]));
+  }
+
+  for( var j = 0; j < arr2.length; j++) {
+    origArr2.push(parseInt(arr2[j]));
+  }
+
+  for(let k = 0; k < origArr1.length; k++) {  
+    for(let l = 0; l < origArr2.length; l++) {      
+      if(origArr1[k] === origArr2[l]) {           
+        commonElements.push(origArr1[k]); 
+      } 
+    } 
+  }
+
+  document.getElementById("answer7").innerHTML = commonElements;
+};
+
+
+</script>
+</body>
+</html>
